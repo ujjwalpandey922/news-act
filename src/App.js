@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import NewsCompo from "./components/NewsCompo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoadingBar from "react-top-loading-bar";
+// import LoadingBar from "react-top-loading-bar";
 const App = () => {
   const size = 6;
   const [progress, setProgress] = useState(0);
@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Navbar />
-        <LoadingBar heigth={3} color="red" progress={progress} />
+        {/* <LoadingBar heigth={3} color="red" progress={progress} /> */}
         <Routes>
           <Route
             path="/"
