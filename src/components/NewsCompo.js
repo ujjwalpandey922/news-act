@@ -31,7 +31,7 @@ const NewsCompo = (props) => {
   };
   const fetchData = async () => {
     props.setProgress(10);
-    let url = `https://newsapi.org/v2/top-headlines?country=${props.countryName}&category=${props.category}&apiKey=e428204e2f1340e3ade5e7c139ab1259&page=1&pageSize=${props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${props.countryName}&category=${props.category}&apiKey=${process.env.REACT_APP_API_KEY}ab1259&page=1&pageSize=${props.pageSize}`;
 
     let data = await fetch(url);
     props.setProgress(40);
@@ -47,6 +47,7 @@ const NewsCompo = (props) => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   return (
